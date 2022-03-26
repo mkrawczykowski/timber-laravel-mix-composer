@@ -1,11 +1,12 @@
 {
   "name": "timber-laravel-mix-composer",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mkrawczykowski/timber-laravel-mix-composer.git"
@@ -16,5 +17,14 @@
   "bugs": {
     "url": "https://github.com/mkrawczykowski/timber-laravel-mix-composer/issues"
   },
-  "homepage": "https://github.com/mkrawczykowski/timber-laravel-mix-composer#readme"
+  "homepage": "https://github.com/mkrawczykowski/timber-laravel-mix-composer#readme",
+  "description": "",
+  "devDependencies": {
+    "bootstrap": "^5.1.3",
+    "browser-sync": "^2.27.9",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "jquery": "^3.6.0",
+    "laravel-mix": "^6.0.43",
+    "popover.js": "^0.2.40"
+  }
 }
